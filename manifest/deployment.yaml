@@ -26,10 +26,10 @@ kind: Service
 metadata:
   name: my-application-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     type: demo
   ports:
-  - port: 31000
+  - port: 80
     targetPort: 8080
 ---
