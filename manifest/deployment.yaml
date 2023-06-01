@@ -31,5 +31,5 @@ spec:
     type: demo
   ports:
   - port: 31000
-    targetPort: 80
+    targetPort: 8080
 ---
