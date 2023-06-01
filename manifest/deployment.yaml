@@ -10,7 +10,7 @@ spec:
       type: demo
   template:
     metadata:
-      name: demo-pod
+      name: demo-pod-updated
       labels:
         type: demo
     spec:
