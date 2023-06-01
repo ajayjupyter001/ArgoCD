@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-application
+  name: my-updated-application
 spec:
   replicas: 3
   selector:
@@ -10,14 +10,13 @@ spec:
       type: demo
   template:
     metadata:
-      name: demo-pod
+      name: demo-updated-pod
       labels:
         type: demo
     spec:
       containers:
         - name: c1
-          image: ubuntu
-          command: ["/bin/bash","-c","touch ajay.txt"]
+          image: rajavarman/new1:latest
           ports:
             - containerPort: 8080
 ---
@@ -27,7 +26,7 @@ kind: Service
 metadata:
   name: my-application-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     type: demo
   ports:
