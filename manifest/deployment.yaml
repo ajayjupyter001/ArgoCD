@@ -1,6 +1,6 @@
 ---
 apiVersion: apps/v1
-kind: Deployments
+kind: Deployment
 metadata:
   name: my-application
 spec:
